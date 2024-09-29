@@ -6,7 +6,9 @@ public class Main {
         int money = 15000;
         int total = 0;
         int month = 0;
+        double percent = 10 / 100;
         while (total < 2459000) {
+            total = total + total / 100;
             total = total + money;
             month = month + 1;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
@@ -29,8 +31,10 @@ public class Main {
 
         int population = 12_000_000;
         int year = 0;
+        int birthRate = population / 1000 * 17;
+        int mortality = population / 1000 * 8;
         while (year < 10) {
-            population = population + 17 - 8;
+            population = population + birthRate - mortality;
             year = year + 1;
             System.out.println("Год " + year + ", численность населения составляет " + population);
         }
@@ -50,8 +54,8 @@ public class Main {
         int capital1 = 15000;
         int month11 = 0;
         while (capital1 < 12_000_000) {
-            capital1 = capital1 + (capital1 * 7) / 100;
-            month11 = month11 + 1;
+            capital1 += (capital1 * 7) / 100;
+            month11 += 1;
             if (month11 % 6 == 0) {
                 System.out.println("Месяц " + month11 + " сумма накоплений равна " + capital1);
             }
@@ -63,7 +67,7 @@ public class Main {
         int capital2 = 15000;
         int month3 = 0;
         while (month3 < 108) {
-            capital2 = capital2 + (capital2 * 7) / 100;
+            capital2 += (capital2 * 7) / 100;
             month3 = month3 + 1;
             if (month3 % 6 == 0) {
                 System.out.println("Месяц " + month3 + " сумма накоплений равна " + capital2);
@@ -78,6 +82,7 @@ public class Main {
         {
             System.out.println("Сегодня пятница, " + j + "-е число. Необходимо подготовить отчет");
         }
+
         //task8
         System.out.println("task8");
 
